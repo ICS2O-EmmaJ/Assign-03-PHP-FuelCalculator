@@ -8,18 +8,20 @@
   // calculate the fuel required and the fuel cost
   $fuelRequired = $tripDistance * ($fuelEfficiency / 100);
   $fuelCost = $tripDistance * ($fuelEfficiency / 100) * $fuelPrice;
+  $requiredRounded = number_format($fuelRequired, 2);
+  $costRounded = number_format($fuelCost, 2);
 
-  // if tripDistance is more than 200km, display "Bon Voyage and Safe Travels!"
+  // if tripDistance is more than 200km, display "Have a safe trip!"
   if ($tripDistance > 200) {
 
-    echo "$fuelRequired" . " litres of fuel are required for the trip, so the fuel cost is " . " $fuelCost" . ".";
-    echo ' Bon Voyage and Safe Travels!'; 
+    echo "$requiredRounded" . " litres of fuel are required for the trip, so the fuel cost is $" . "$costRounded" . ".";
+    echo ' Have a safe trip!'; 
 
 }
 
   else {
 
-    echo "$fuelRequired" . "litres of fuel are required for the trip, so the fuel cost is " . " $fuelCost" . ".";
+    echo "$requiredRounded" . " litres of fuel are required for the trip, so the fuel cost is $" . "$costRounded" . ".";
 }
     
 ?>

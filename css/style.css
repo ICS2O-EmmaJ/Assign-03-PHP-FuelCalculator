@@ -5,14 +5,15 @@
 */
 
 body {
-	background-color: #ddd0fb;
+	background-color: #b3dfe6;
 }
 
 h1 {
-	background-color: #b989e1;
+	background-color: #2e96a6;
 	color: white;
 	padding: 40px;
 	text-align: center;
+  font-family: Garamond, Times New Roman, serif;
 }
 
 h5 {
