@@ -15,7 +15,6 @@
   </head>
   <center>
   <body>
-    <script src="./js/script.js"></script>
     <?php echo "<h1>Fuel Quantity Required and Fuel  
       <br>
       Cost Calculator for a Car Trip</h1>"; ?>
@@ -32,25 +31,25 @@
       <li class="mdl-list__item">
         <span class="mdl-list__item-primary-content">
         <i class="material-icons mdl-list__item-icon">star</i>
-        <font face="Georgia">Driving to school everyday
+        Driving to school everyday
     </span>
       </li>
       <li class="mdl-list__item">
         <span class="mdl-list__item-primary-content">
         <i class="material-icons mdl-list__item-icon">star</i>
-        <font face="Georgia">Driving to piano lessons on Thursdays
+        Driving to piano lessons on Thursdays
       </span>
       </li>
       <li class="mdl-list__item">
         <span class="mdl-list__item-primary-content">
         <i class="material-icons mdl-list__item-icon">star</i>
-        <font face="Georgia">Driving to the mall to go shopping
+        Driving to the mall to go shopping
       </span>
       </li>
       <li class="mdl-list__item">
         <span class="mdl-list__item-primary-content">
         <i class="material-icons mdl-list__item-icon">star</i>
-        <font face="Georgia">Road trips in the Summer!
+        Road trips in the Summer!
       </span>
       </li>
     </ul>
@@ -75,23 +74,21 @@
         <tr>
           <td style="width:30%"><img src="./images/caricon.png" alt="Car" width="50%" height="auto"/></td>
     			<td style="width:50%"><h4>Enter the following information about the car trip:</h4>
-    			<form action="javascript:calcFuel()">
+           <form action="./results.php" method="post" target="results">
     				<label for="distance">The distance of the trip (km):</label>
-    				<input type="number" step="any" min="0" max="2000" id="distance" placeholder="Distance (km)"><br><br>
+    				<input type="number" step="any" min="0" max="2000" name="distance" placeholder="Distance (km)"><br><br>
     				<label for="efficiency">The fuel efficiency (L/100km):</label>
-    				<input type="number" step="any" min="0" id="efficiency" placeholder="Efficiency (L/100km)"><br><br>             
+    				<input type="number" step="any" min="0" name="efficiency" placeholder="Efficiency (L/100km)"><br><br>             
     				<label for="price">The price of fuel ($/L):</label>
-    				<input type="number" step="0.01" min="0" id="price" placeholder="Price ($/L)"><br><br>
+    				<input type="number" step="0.01" min="0" name="price" placeholder="Price ($/L)"><br><br>
     				<input type="submit" value="Calculate"><br><br><br>
           </form></td>
           <td style="width:8%"><img src="./images/gettingfuel.png" alt="Car" width="100%" height="auto"/></td>
         </tr>
       </table>
-  	<!-- Create a space where the user information will be displayed -->
-  	<div id="display-results">
-    	<div id="fuel-required"></div>
-  		<div id="fuel-cost"></div>
-  	</div>
+    <!-- Create a space where the user information will be displayed -->
+		<iframe id="results" name="results">
+    </iframe>
     <br>
     <!-- Image -->
     <img src="./images/cartrip.jpg" width="500"></center>

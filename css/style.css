@@ -1,7 +1,7 @@
 /* Created by: Emma Janani
 * Created on: April 2022
 * This CSS file defines the style for index.html
-* ICS2O-Assign-03-HTML-NameOfProgram
+* ICS2O-Assign-03-PHP-NameOfProgram
 */
 
 body {
@@ -27,7 +27,8 @@ div {
   margin-right: 300px;
 }
 
-#display-results{
-  background-color: #0061ab;
+#results{
+  border: solid;
+  width: 20%;
 }
 
